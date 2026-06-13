@@ -1,0 +1,73 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #0a0e1a;
+  --foreground: #e8eef8;
+  --card: #111827;
+  --card-foreground: #e8eef8;
+  --popover: #111827;
+  --popover-foreground: #e8eef8;
+  --primary: #00d4ff;
+  --primary-foreground: #0a0e1a;
+  --secondary: #1e2d45;
+  --secondary-foreground: #e8eef8;
+  --muted: #1a2436;
+  --muted-foreground: #7a92b0;
+  --accent: #0066cc;
+  --accent-foreground: #e8eef8;
+  --destructive: #ff3b3b;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 212, 255, 0.15);
+  --input: #1e2d45;
+  --input-background: #1e2d45;
+  --switch-background: #2a3f5a;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #00d4ff;
+  --chart-1: #00d4ff;
+  --chart-2: #00ff88;
+  --chart-3: #ffb800;
+  --chart-4: #ff6b35;
+  --chart-5: #c084fc;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+  html { font-size: var(--font-size); }
+}
